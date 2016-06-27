@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "wrappedProject": "../../Candor/Candor.csproj",
+      "bin": {
+        "assembly": "../../Candor/obj/{configuration}/Candor.Core.dll",
+        "pdb": "../../Candor/obj/{configuration}/Candor.Core.pdb"
+      },
+      "dependencies": {
+        "Common.Logging": "2.2.0",
+        "Common.Logging.Core": "2.2.0"
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Xml.Serialization;
-using Microsoft.WindowsAzure;
+﻿using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Queue;
+using System;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Candor.WindowsAzure.Storage.Queue
 {
@@ -105,9 +105,9 @@ namespace Candor.WindowsAzure.Storage.Queue
                     writer.Flush();
 
                     stream.Position = 0;
-                    var result = new XmlSerializer(typeof (RecordChangeNotification)).Deserialize(stream);
+                    var result = new XmlSerializer(typeof(RecordChangeNotification)).Deserialize(stream);
 
-                    return (RecordChangeNotification) result;
+                    return (RecordChangeNotification)result;
                 }
             }
         }

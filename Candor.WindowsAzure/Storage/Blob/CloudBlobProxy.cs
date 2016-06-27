@@ -1,9 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using Microsoft.WindowsAzure;
+﻿using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
+using System;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Candor.WindowsAzure.Storage.Blob
 {

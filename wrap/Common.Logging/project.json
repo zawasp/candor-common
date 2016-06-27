@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "bin": {
+        "assembly": "../../../packages/Common.Logging.2.2.0/lib/net40/Common.Logging.dll",
+        "pdb": "../../../packages/Common.Logging.2.2.0/lib/net40/Common.Logging.pdb"
+      }
+    }
+  }
+}

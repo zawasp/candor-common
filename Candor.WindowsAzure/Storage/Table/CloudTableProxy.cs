@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.WindowsAzure;
+﻿using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Candor.WindowsAzure.Storage.Table
 {
@@ -329,10 +329,10 @@ namespace Candor.WindowsAzure.Storage.Table
             table.CreateIfNotExists();
 
             var wrap = new TableEntityProxy<T>(item)
-                {
-                    PartitionKey = PartitionKey(item),
-                    RowKey = RowKey(item)
-                };
+            {
+                PartitionKey = PartitionKey(item),
+                RowKey = RowKey(item)
+            };
             if (String.IsNullOrEmpty(wrap.PartitionKey))
                 throw new ArgumentNullException("PartitionKey", "The partition key function resulted in a null partition key.");
             if (String.IsNullOrEmpty(wrap.RowKey))
@@ -364,10 +364,10 @@ namespace Candor.WindowsAzure.Storage.Table
                     batchOperation = new TableBatchOperation();
                 }
                 var wrap = new TableEntityProxy<T>(item)
-                    {
-                        PartitionKey = PartitionKey(item),
-                        RowKey = RowKey(item)
-                    };
+                {
+                    PartitionKey = PartitionKey(item),
+                    RowKey = RowKey(item)
+                };
                 if (String.IsNullOrEmpty(wrap.PartitionKey))
                     throw new ArgumentNullException("PartitionKey", "The partition key function resulted in a null partition key.");
                 if (String.IsNullOrEmpty(wrap.RowKey))
@@ -406,12 +406,12 @@ namespace Candor.WindowsAzure.Storage.Table
                 throw new InvalidOperationException("The item was changed since you retrieved it.");
 
             var wrap = new TableEntityProxy<T>(item)
-                {   //Putting ETag on this entity update allows it to replace the item in the table storage.
-                    PartitionKey = pKey,
-                    RowKey = rKey,
-                    ETag = updateEntity.ETag,
-                    Timestamp = updateEntity.Timestamp
-                };
+            {   //Putting ETag on this entity update allows it to replace the item in the table storage.
+                PartitionKey = pKey,
+                RowKey = rKey,
+                ETag = updateEntity.ETag,
+                Timestamp = updateEntity.Timestamp
+            };
             if (String.IsNullOrEmpty(wrap.PartitionKey))
                 throw new ArgumentNullException("PartitionKey", "The partition key function resulted in a null partition key.");
             if (String.IsNullOrEmpty(wrap.RowKey))

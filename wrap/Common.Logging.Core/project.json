@@ -3,8 +3,8 @@
   "frameworks": {
     "net451": {
       "bin": {
-        "assembly": "../../../packages/Common.Logging.Core.2.2.0/lib/net40/Common.Logging.Core.dll",
-        "pdb": "../../../packages/Common.Logging.Core.2.2.0/lib/net40/Common.Logging.Core.pdb"
+        "assembly": "../../../packages/Common.Logging.Core.3.3.1/lib/net40/Common.Logging.Core.dll",
+        "pdb": "../../../packages/Common.Logging.Core.3.3.1/lib/net40/Common.Logging.Core.pdb"
       }
     }
   }

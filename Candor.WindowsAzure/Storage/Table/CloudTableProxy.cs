@@ -1,5 +1,4 @@
-﻿using Microsoft.Azure;
-using Microsoft.WindowsAzure.Storage;
+﻿using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
@@ -63,7 +62,7 @@ namespace Candor.WindowsAzure.Storage.Table
                 if (String.IsNullOrWhiteSpace(_connectionName))
                     throw new InvalidOperationException("The Cloud ConnectionName has not been configured.");
                 if (_account == null)
-                    _account = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting(_connectionName));
+                    _account = CloudStorageAccount.Parse(_connectionName);
                 if (_tableClient == null)
                     _tableClient = _account.CreateCloudTableClient();
                 _table = _tableClient.GetTableReference(!String.IsNullOrWhiteSpace(TableName) ? TableName : typeof(T).Name.GetValidTableName());

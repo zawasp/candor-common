@@ -3,8 +3,8 @@
   "frameworks": {
     "net451": {
       "bin": {
-        "assembly": "../../../packages/WindowsAzure.Storage.7.0.0/lib/net40/Microsoft.WindowsAzure.Storage.dll",
-        "pdb": "../../../packages/WindowsAzure.Storage.7.0.0/lib/net40/Microsoft.WindowsAzure.Storage.pdb"
+        "assembly": "../../../packages/WindowsAzure.Storage.7.1.2/lib/net40/Microsoft.WindowsAzure.Storage.dll",
+        "pdb": "../../../packages/WindowsAzure.Storage.7.1.2/lib/net40/Microsoft.WindowsAzure.Storage.pdb"
       }
     }
   }
